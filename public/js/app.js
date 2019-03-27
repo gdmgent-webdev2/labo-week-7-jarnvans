@@ -49191,9 +49191,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Documenten\School\2018 - 2019\webdev-2\week6\webdev2-week6\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\Documenten\School\2018 - 2019\webdev-2\week6\webdev2-week6\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! D:\Documenten\School\2018 - 2019\webdev-2\week6\webdev2-week6\resources\sass\app-chateau.scss */"./resources/sass/app-chateau.scss");
+__webpack_require__(/*! D:\Documenten\School\2018 - 2019\webdev-2\week6\webdev-week6\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\Documenten\School\2018 - 2019\webdev-2\week6\webdev-week6\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! D:\Documenten\School\2018 - 2019\webdev-2\week6\webdev-week6\resources\sass\app-chateau.scss */"./resources/sass/app-chateau.scss");
 
 
 /***/ })

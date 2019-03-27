@@ -22,32 +22,16 @@
                 </tr>
             </thead>
             <tbody>
-
+            @foreach($clients as $client) :
                 <tr>
-                    <td>Mr. Herr Seele</td>
-                    <td>herr.seele@humo.be</td>
+                    <td>{{$client->firstname . ' ' . $client->lastname}}</td>
+                    <td>{{$client->email}}</td>
                     <td>
-                        <a class="hollow button" href="{{ route('clients.edit', 1) }}">BEWERK</a>
+                        <a class="hollow button" href="{{ route('clients.edit', $client->id) }}">BEWERK</a>
                         <a class="hollow button warning" href="{{ route('reservations.new', 1) }}">BOEK EEN KAMER</a>
                     </td>
                 </tr>
-
-                <tr>
-                    <td>Mr. Luc Charles Zeebroek</td>
-                    <td>kamagurka@humo.be</td>
-                    <td>
-                        <a class="hollow button" href="{{ route('clients.edit', 2) }}">BEWERK</a>
-                        <a class="hollow button warning" href="{{ route('reservations.new', 2) }}">BOEK EEN KAMER</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ms. Eva Moutin</td>
-                    <td>eva.mouton@flair.be</td>
-                    <td>
-                        <a class="hollow button" href="{{ route('clients.edit', 3) }}">BEWERK</a>
-                        <a class="hollow button warning" href="{{ route('reservations.new', 3) }}">BOEK EEN KAMER</a>
-                    </td>
-                </tr>
+            @endforeach
 
             </tbody>
         </table>

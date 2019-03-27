@@ -24,7 +24,7 @@ Route::name('clients.')->group(function () {
     Route::get('/klanten', 'ClientController@getIndex')->name('index');
     Route::get('/klanten/nieuw', 'ClientController@getCreate')->name('new');
     Route::get('/klanten/bewerk/{clientId}', 'ClientController@getEdit')->name('edit');
-    // Route::post('/klanten/bewaar', 'ClientController@postSave')->name('save');
+    Route::post('/klanten/bewaar', 'ClientController@postSave')->name('save');
 });
 
 Route::name('reservations.')->group(function () {

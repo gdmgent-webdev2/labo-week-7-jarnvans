@@ -11,6 +11,17 @@ class Client extends Model
     */
     protected $table = 'Clients';
 
+    protected $fillable =  [
+        'title_id',
+        'firstname',
+        'lastname',
+        'address',
+        'zipcode',
+        'city',
+        'province',
+        'email'
+    ];
+
     public function title() {
         return $this->hasOne('App\Models\Title');
     }
