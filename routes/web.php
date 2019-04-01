@@ -14,9 +14,15 @@
 
 
 
-// dynamic routes 
+// dynamic routes
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::name('pages.')->group(function () {
     Route::get('/', 'PagesController@getIndex')->name('home');
+    Route::get('/logout', 'PagesController@logOut')->name('logout');
 });
 
 
@@ -46,6 +52,3 @@ Route::name('reservations.')->group(function () {
 // Route::get('/reservaties', function () {return view('reservations.index');})->name('reservations');
 // Route::get('/reservaties/nieuw/{client_id}', function ($client_id) {return view('reservations.edit', ['client_id' => $client_id]);})->name('reservations.create');
 // Route::get('/reservaties/bewerk/{reservation_id}', function ($reservation_id) {return view('reservations.edit', ['id' => $reservation_id]);})->name('reservations.edit');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

@@ -22,7 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach($clients as $client) :
+            @foreach($clients as $client) 
                 <tr>
                     <td>{{$client->firstname . ' ' . $client->lastname}}</td>
                     <td>{{$client->email}}</td>
