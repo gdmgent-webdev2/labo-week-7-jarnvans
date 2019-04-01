@@ -33,16 +33,20 @@ class ClientController extends Controller
 
     public function postSave() {
         // $request = request()->all()
-        \request()->validate([
+
+        $clientId = (request('id')) ? request('id') : null;
+        $validationRules = [
             'title' => 'required|between:1,4|numeric',
             'firstname' => 'required|max:255',
             'lastname' => 'required|max:255',
-            'email'=>'required|max:255|email|unique:clients',
+            'email'=>'required|max:255|email|unique:clients,email,' . $clientId,
             'zipcode' => 'required|max:10',
             'address' => 'required|max:255',
             'city' => 'required|max:255',
             'province' => 'required|max:255',
-        ]);
+        ];
+
+        request()->validate($validationRules);
 
         $data = [
             'title_id' => request('title'),
@@ -57,7 +61,9 @@ class ClientController extends Controller
             //
         ];
 
-        Client::create($data);
+        Client::UpdateOrCreate(['id' => $clientId], $data);
+
+        
 
         return redirect()->route('clients.index');
     }
